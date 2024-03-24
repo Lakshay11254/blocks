@@ -1,11 +1,17 @@
-
 import React, { useState } from "react";
-import { Button, FormControl, InputLabel, MenuItem, Select, TextField, Typography } from "@mui/material";
+import {
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+  Typography,
+} from "@mui/material";
 import Header from "./header";
 import WidgetsIcon from "@mui/icons-material/Widgets";
-import PaidIcon from '@mui/icons-material/Paid';
-import ReceiptIcon from '@mui/icons-material/Receipt';
-
+import PaidIcon from "@mui/icons-material/Paid";
+import ReceiptIcon from "@mui/icons-material/Receipt";
 
 const TransactionForm = ({ sendTransaction }) => {
   // Mock addresses
@@ -15,7 +21,7 @@ const TransactionForm = ({ sendTransaction }) => {
     "0xffaa6990069ecba8570dab82cba2caf6ff77b8fa",
     "0xcefd1cf4fa1369a36f1bcf98f7c7b0001bf8c9ba",
     "0xafaa6990069ecba8570dab82cba2caf6ff77bhgg",
-    "0xafa57bd80dfef746aaa7bea1e9e024e89ab1056e"
+    "0xafa57bd80dfef746aaa7bea1e9e024e89ab1056e",
   ];
 
   const [source, setSource] = useState("");
@@ -44,12 +50,16 @@ const TransactionForm = ({ sendTransaction }) => {
           onChange={(e) => setSource(e.target.value)}
         >
           {mockAddresses.map((address) => (
-            <MenuItem key={address} value={address}>{address}</MenuItem>
+            <MenuItem key={address} value={address}>
+              {address}
+            </MenuItem>
           ))}
         </Select>
       </FormControl>
       <FormControl fullWidth sx={{ my: 2 }}>
-        <InputLabel id="destination-address-label">Destination Address</InputLabel>
+        <InputLabel id="destination-address-label">
+          Destination Address
+        </InputLabel>
         <Select
           labelId="destination-address-label"
           id="destination-address"
@@ -57,7 +67,9 @@ const TransactionForm = ({ sendTransaction }) => {
           onChange={(e) => setDestination(e.target.value)}
         >
           {mockAddresses.map((address) => (
-            <MenuItem key={address} value={address}>{address}</MenuItem>
+            <MenuItem key={address} value={address}>
+              {address}
+            </MenuItem>
           ))}
         </Select>
       </FormControl>
