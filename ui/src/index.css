@@ -41,8 +41,16 @@ li > a {
 }
 
 button {
-  padding: 10px 10px 10px 10px;
-  margin-left: 85px
+  border: none;
+  color: white;
+  padding: 20px 42px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+
 }
 input {
   padding: 5px 5px 5px 5px;
