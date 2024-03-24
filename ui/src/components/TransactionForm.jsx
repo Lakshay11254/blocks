@@ -13,7 +13,7 @@ import PaidIcon from "@mui/icons-material/Paid";
 import ReceiptIcon from "@mui/icons-material/Receipt";
 
 const TransactionForm = ({ sendTransaction }) => {
-  // Mock addresses
+  // mock addresses
   const mockAddresses = [
     "0x123abcad1kaa8570dab82cba2ba8570ff2g222d1",
     "0x456defdakl21dad1ka90069ecba8570dab82cba2",

@@ -1,5 +1,3 @@
-// //components/blocks.jsx
-
 import React, { useEffect, useState } from "react";
 import AddressSelector from "./addressSelector";
 import Header from "./header";

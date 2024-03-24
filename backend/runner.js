@@ -1,4 +1,3 @@
-//backend/server.js
 const blocksModule = require('./modules/blocks');
 
 

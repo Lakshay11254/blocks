@@ -1,6 +1,3 @@
-//App.jsx
-
-
 import Blocks from './components/blocks'
 import {
   BrowserRouter,

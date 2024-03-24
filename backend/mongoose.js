@@ -1,12 +1,11 @@
-// backend/mongoose.js
 const mongoose = require("mongoose");
 
-const MONGODB_URI = "mongodb://localhost:27017/blocks"; // Update with your MongoDB URI
+const MONGODB_URI = "mongodb://localhost:27017/blocks"; //update uri?
 
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  bufferCommands: false, // Disable command buffering
+  bufferCommands: false, 
 });
 
 mongoose.connection.on("connected", () => {
