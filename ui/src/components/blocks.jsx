@@ -5,7 +5,7 @@ import AddressSelector from "./addressSelector";
 import Header from "./header";
 import BlockDetails from "./blockDetails";
 import WidgetsIcon from "@mui/icons-material/Widgets";
-
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography } from "@mui/material";
 
 
 
@@ -72,15 +72,30 @@ function Blocks() {
       </div>
       <TransactionForm sendTransaction={sendTransaction} />
       <div className="container">
-        <Header title="Transaction History" headerSize="h6" />
-        <ul>
-          {transactionHistory.map((transaction, index) => (
-            <li key={index}>
-              {`Source: ${transaction.source}, Destination: ${transaction.destination}, Amount: ${transaction.amount}`}
-            </li>
-          ))}
-        </ul>
-      </div>
+      <Typography variant="h6" gutterBottom>
+        Transaction History
+      </Typography>
+      <TableContainer component={Paper}>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>Source</TableCell>
+              <TableCell>Destination</TableCell>
+              <TableCell>Amount</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {transactionHistory.map((transaction, index) => (
+              <TableRow key={index}>
+                <TableCell>{transaction.source}</TableCell>
+                <TableCell>{transaction.destination}</TableCell>
+                <TableCell>{transaction.amount}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </div>
     </>
   );
 }
