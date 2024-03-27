@@ -1,6 +1,13 @@
 Name - Lakshay Malhotra
 ID   - 101517948
 
+------------------
+
+Commands to run on terminal
+node app.js = runs mongoDB server
+npm start = Runs React
+
+-----------------
 <!-- 
 # Getting Started with Create React App
 

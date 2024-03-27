@@ -1,15 +1,17 @@
 import React from "react";
-import { AppBar, Toolbar, Typography } from "@mui/material";
+
 
 const Navbar = () => {
+
   return (
-    <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6" component="div">
-          Check Blocks info & Send Transactions
-        </Typography>
-      </Toolbar>
-    </AppBar>
+    <div className="navbar">
+        <h1 className="navbar-title">Blockchain Explorer</h1>
+        <div className="navbar-links">
+            <a href="/blocks/addresses">Blocks</a>
+            <a href="/transactions/send">Transactions</a>
+        </div>
+    </div>
+
   );
 };
 

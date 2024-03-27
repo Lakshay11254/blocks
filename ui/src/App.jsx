@@ -20,7 +20,8 @@ function App() {
                   <BrowserRouter>
                       <Routes>
                           <Route path="/" element={<Blocks />} />
-                          <Route path="/transactionhistory" element={<TransactionForm />} />
+                          <Route path="/blocks/addresses" element={<Blocks />} />
+                          <Route path="/transactions/send" element={<TransactionForm />} />
                       </Routes>
                   </BrowserRouter>
       </ThemeProvider>

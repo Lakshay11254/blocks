@@ -3,11 +3,8 @@ import AddressSelector from "./addressSelector";
 import Header from "./header";
 import BlockDetails from "./blockDetails";
 import WidgetsIcon from "@mui/icons-material/Widgets";
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography } from "@mui/material";
-
-
-
-import TransactionForm from "./TransactionForm"; // Import TransactionForm
+import TransactionForm from "./TransactionForm";
+import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
 
 function Blocks() {
   const [ethereumAddresses, setEthereumAddresses] = useState(null);
@@ -65,12 +62,12 @@ function Blocks() {
         handleAction={handleAddressChange}
         addresses={ethereumAddresses}
       />
-      <div className="container">
+      <div className="container mx-auto">
         <BlockDetails {...selectedBlock} />
       </div>
       <TransactionForm sendTransaction={sendTransaction} />
-      <div className="container">
-      <Typography variant="h6" gutterBottom>
+      <div className="container mx-auto">
+      <Typography variant="h6" gutterBottom className="my-4">
         Transaction History
       </Typography>
       <TableContainer component={Paper}>
@@ -99,6 +96,3 @@ function Blocks() {
 }
 
 export default Blocks;
-
-
-

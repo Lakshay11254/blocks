@@ -1,19 +1,10 @@
 import React, { useState } from "react";
-import {
-  Button,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  TextField,
-  
-} from "@mui/material";
+import { Button, FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material";
 import Header from "./header";
 import PaidIcon from "@mui/icons-material/Paid";
 import ReceiptIcon from "@mui/icons-material/Receipt";
 
 const TransactionForm = ({ sendTransaction }) => {
-  // mock addresses
   const mockAddresses = [
     "0x123abcad1kaa8570dab82cba2ba8570ff2g222d1",
     "0x456defdakl21dad1ka90069ecba8570dab82cba2",
@@ -35,12 +26,11 @@ const TransactionForm = ({ sendTransaction }) => {
   };
 
   return (
-    <div>
+    <div className="p-4">
       <Header title="Transactions" headerSize="h5" icon={ReceiptIcon} />
       <Header title="Send Transactions" headerSize="h5" icon={PaidIcon} />
 
-      {/* <Typography variant="h6" headerSize="h5" icon={PaidIcon}>Send Transaction</Typography> */}
-      <FormControl fullWidth sx={{ my: 2 }}>
+      <FormControl fullWidth className="my-4">
         <InputLabel id="source-address-label">Source Address</InputLabel>
         <Select
           labelId="source-address-label"
@@ -55,10 +45,8 @@ const TransactionForm = ({ sendTransaction }) => {
           ))}
         </Select>
       </FormControl>
-      <FormControl fullWidth sx={{ my: 2 }}>
-        <InputLabel id="destination-address-label">
-          Destination Address
-        </InputLabel>
+      <FormControl fullWidth className="my-4">
+        <InputLabel id="destination-address-label">Destination Address</InputLabel>
         <Select
           labelId="destination-address-label"
           id="destination-address"
@@ -77,7 +65,7 @@ const TransactionForm = ({ sendTransaction }) => {
         value={amount}
         onChange={(e) => setAmount(e.target.value)}
         fullWidth
-        sx={{ my: 2 }}
+        className="my-4"
       />
       <Button variant="contained" onClick={handleSendTransaction}>
         Send
